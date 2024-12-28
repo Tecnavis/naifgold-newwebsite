@@ -29,6 +29,141 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+
+    <style>
+        .flipper-container {
+          position: relative;
+          perspective: 1000;
+          width: auto;
+          height: 300px;
+          background-color: transparent;
+        }
+        .flip {
+          height: 100%;
+          width: 100%;
+          transform-style: preserve-3d;
+          transition: all 1s;
+          margin-top: 20px;
+        }
+        .flipper-container:hover .flip {
+          transform: rotateY(180deg);
+        }
+        .face {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          backface-visibility: hidden;
+        }
+        .face.back {
+          display: block;
+          transform: rotateY(180deg);
+          box-sizing: border-box;
+          color: #fff;
+          text-align: center;
+        }
+        .gallery_title {
+          font-size: 36px;
+          color: #42B32F;
+          text-align: center;
+          font-weight: 500;
+          margin-bottom: 50px;
+        }
+        .gallery_title:after {
+          content: "";
+          position: absolute;
+          width: 7.5%;
+          left: 46.5%;
+          height: 45px;
+          border-bottom: 1px solid #5e5e5e;
+        }
+        .filter_button {
+          font-size: 15px;
+          /* border: 1px solid #42B32F; */
+          border-radius: 0px;
+          text-align: center;
+          color: #f3f1ee;
+          margin-bottom: 10px;
+          cursor: pointer;
+          background-color: transparent;
+          border-color:rgb(15, 15, 15);
+          margin-top: -90px;
+    
+        }
+        .filter_button:hover {
+        color: #f5eeee;
+        background-color: transparent; 
+        border-bottom: 4px solid #FFA500; 
+    }
+    .gallery_product {
+          margin-bottom: 30px;
+        }
+        .port_image {
+          width: 100%;
+        }
+        .btn btn-default{
+        border: none;
+        
+        }
+    
+        
+        .ms-2 {
+          /* Other styles */
+          text-stroke: 1px rgb(230, 219, 219); 
+          -webkit-text-stroke: 1px rgb(94, 84, 84);
+           /* For Safari/Chrome */
+          -webkit-text-fill-color: transparent; 
+          text-fill-color: transparent;
+        }
+    
+        .white-line {
+      background-color: white;
+      height: 2px; /* Adjust height as needed */
+    }
+    
+    /* Adjust button layout for small screens */
+    /* Adjust button layout for small screens */
+    @media (max-width: 767px) {
+        .filter-button {
+            display: inline;
+            margin-bottom: 10px; /* Adjust the value to control the vertical space between buttons */
+            margin-right: 10px;  /* Adjust the value to control the horizontal space between buttons */
+            text-align: center;
+            margin-top: 5px;
+        }
+    }
+    
+    
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        /* background-color: #25D366; */
+        border-radius: 50px;
+        padding: 10px 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        z-index: 1000;
+        
+    }
+    
+    .whatsapp-button a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    .whatsapp-button img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    
+    
+      
+    </style>
 </head>
 
 <body>
@@ -44,9 +179,10 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>
+                        Gold Souk, Deira, Dubai, UAE</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>971 54 404 8993</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@naifgold.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
@@ -211,10 +347,12 @@
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-3 mb-5">
                         <h5 class="fw-bold  text-uppercase" style="color: darkgoldenrod;">About Us</h5>
-                        <h1 class="mb-0">The Best IT Solution With 10 Years of Experience</h1>
+                        <h1 class="mb-0">Trusted Gold Bullion Experts Ensuring Secure Investments</h1>
                     </div>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
-                    <div class="row g-0 mb-3">
+                    <p class="mb-4">
+                        We are your trusted partners in gold bullion, providing top-quality solutions tailored to secure your investments. With a commitment to excellence, transparency, and customer satisfaction, we offer expert guidance in purchasing, managing, and safeguarding your precious metals. Our unwavering dedication ensures your wealth is protected, giving you confidence in every transaction and peace of mind for the future.
+                        </p>
+                    <!-- <div class="row g-0 mb-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
                             <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Award Winning</h5>
                             <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Professional Staff</h5>
@@ -223,8 +361,8 @@
                             <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Support</h5>
                             <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Fair Prices</h5>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                    </div> -->
+                    <!-- <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
@@ -232,7 +370,7 @@
                             <h5 class="mb-2">Call to ask any question</h5>
                             <h4 class="text-primary mb-0">+012 345 6789</h4>
                         </div>
-                    </div>
+                    </div> -->
                     <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request A Quote</a>
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
@@ -250,25 +388,25 @@
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
-                <h1 class="mb-0">We Are Here to Grow Your Business Exponentially</h1>
+                <h5 class="fw-bold text- text-uppercase" style="color: rgb(168, 153, 19);">Why Choose Us</h5>
+                <h1 class="mb-0">Why Choose Us for Gold Bullion Excellence</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-4">
                     <div class="row g-5">
                         <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <div class="bg- rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px; background-color: rgb(241, 160, 103);">
                                 <i class="fa fa-cubes text-white"></i>
                             </div>
-                            <h4>Best In Industry</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                            <h4>Unmatched Expertise in Gold Bullion</h4>
+                            <p class="mb-0">Our team brings years of experience and in-depth knowledge, ensuring you receive accurate guidance and reliable solutions for your gold investments.</p>
                         </div>
                         <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <div class="bg- rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px; background-color: rgb(241, 160, 103) ;">
                                 <i class="fa fa-award text-white"></i>
                             </div>
-                            <h4>Award Winning</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                            <h4>Commitment to Quality and Transparency</h4>
+                            <p class="mb-0">We prioritize offering the finest gold bullion with complete transparency, empowering you to make informed and confident investment decisions.</p>
                         </div>
                     </div>
                 </div>
@@ -280,18 +418,18 @@
                 <div class="col-lg-4">
                     <div class="row g-5">
                         <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <div class="bg- rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px; background-color: rgb(241, 160, 103) ;">
                                 <i class="fa fa-users-cog text-white"></i>
                             </div>
-                            <h4>Professional Staff</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                            <h4>Secure and Hassle-Free Transactions</h4>
+                            <p class="mb-0">Experience seamless and secure transactions, designed to provide you with peace of mind while safeguarding your wealth.</p>
                         </div>
                         <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <div class="bg rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;background-color: rgb(241, 160, 103) ;">
                                 <i class="fa fa-phone-alt text-white"></i>
                             </div>
-                            <h4>24/7 Support</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                            <h4>Customer-Centric Support and Trust</h4>
+                            <p class="mb-0">We are dedicated to building long-lasting relationships, offering personalized support and trust-driven services to meet your unique needs.</p>
                         </div>
                     </div>
                 </div>
@@ -302,79 +440,90 @@
 
 
     <!-- Service Start -->
+
+
+    
+
+
+
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
+                <h5 class="fw-bold text-primary text-uppercase">Our Products</h5>
                 <h1 class="mb-0">Custom IT Solutions for Your Successful Business</h1>
             </div>
             <div class="row g-5">
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-shield-alt text-white"></i>
+                <div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 filter hdpe">
+                    <div class="flipper-container">
+                      <div class="flip">
+                        <div class="front face text-center">
+                          <img src="./img/gallery/GOLD/Carbon Neutral Lady Fortuna 1oz Gold Minted Bar/au_1oz_obvcertipamp_0.png" height="300px">
                         </div>
-                        <h4 class="mb-3">Cyber Security</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-chart-pie text-white"></i>
+                      <div class="back face">
+                         <img src="./img/gallery/GOLD/Carbon Neutral Lady Fortuna 1oz Gold Minted Bar/au_1oz_obvcertipamp_0.png" height="300px">
+                        
                         </div>
-                        <h4 class="mb-3">Data Analytics</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
+                      </div>
                     </div>
-                </div>
+                    <p style="text-align: center; margin-top: 10px;">1oz Gold Bar - Carbon Neutral Lady Fortuna</p>
+                  </div>
+
+                  <div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 filter hdpe">
+                    <div class="flipper-container">
+                      <div class="flip">
+                        <div class="front face text-center">
+                          <img src="./img/gallery/GOLD/Fortuna Gold Minted Bar - 1 KG/1kg.png" height="300px">
+                        </div>
+                      <div class="back face">
+                         <img src="./img/gallery/GOLD/Fortuna Gold Minted Bar - 1 KG/1kg_fortuna.png" height="300px">
+                        
+                        </div>
+                      </div>
+                    </div>
+                    <p style="text-align: center; margin-top: 10px;">Fortuna Gold Minted Bar</p>
+                  </div>
+
+
+                <div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 filter hdpe">
+                      <div class="flipper-container">
+                        <div class="flip">
+                          <div class="front face text-center">
+                            <img src="./img/gallery/GOLD/Fortuna Gold Minted Bar - 100g/au_100g_revcertipamp_2.png   " height="300px">
+                          </div>
+                        <div class="back face">
+                           <img src="./img/gallery/GOLD/Fortuna Gold Minted Bar - 100g/au_100g_obvcertipamp_0.png" height="300px">
+                          
+                          </div>
+                        </div>
+                      </div>
+                      <p style="text-align: center; margin-top: 10px;">Fortuna Gold Minted Bar - 100g/au</p>
+                  </div>
+
+
+                   <div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 filter hdpe">
+                    <div class="flipper-container">
+                      <div class="flip">
+                        <div class="front face text-center">
+                          <img src="./img/gallery/GOLD/Fortuna Gold Minted Bar - 10g/au_10g_revcertipamp_1.png    " height="300px">
+                        </div>
+                      <div class="back face">
+                         <img src="./img/gallery/GOLD/Fortuna Gold Minted Bar - 10g/au_10g_obvcertipamp.png" height="300px">
+                        
+                        </div>
+                      </div>
+                    </div>
+                    <p style="text-align: center; margin-top: 10px;">Fortuna Gold Minted Bar - 10g/au-10g-</p>
+                  </div>
+
+
+                
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-code text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Web Development</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fab fa-android text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Apps Development</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-search text-white"></i>
-                        </div>
-                        <h4 class="mb-3">SEO Optimization</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
+                    <!-- <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
                         <h3 class="text-white mb-3">Call Us For Quote</h3>
                         <p class="text-white mb-3">Clita ipsum magna kasd rebum at ipsum amet dolor justo dolor est magna stet eirmod</p>
                         <h2 class="text-white mb-0">+012 345 6789</h2>
-                    </div>
+                    </div> -->
+                    <a href="service.html" class="btn btn- py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s" style="background-color: #4f370b; color: #fffbfb;" >View More</a>
                 </div>
             </div>
         </div>
@@ -728,16 +877,17 @@
     <!-- Vendor End -->
     
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid text-light mt-5 wow fadeInUp" data-wow-delay="0.1s"  style="background-color: black;">
         <div class="container">
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-6 footer-about">
-                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg- p-4" style="background-color:  rgb(83, 70, 9);">
                         <a href="index.html" class="navbar-brand">
-                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Startup</h1>
+                            <!-- <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Startup</h1> -->
+                             <img src="./img/naifgoldlogo.png" alt="" style="height: 60px;">
                         </a>
-                        <p class="mt-3 mb-4">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.</p>
+                        <p class="mt-3 mb-4">Secure your future with trusted gold bullion solutions. Offering quality, transparency, and expert guidance, we ensure seamless transactions and safeguard your investments for lasting wealth and peace of mind.
+                            </p>
                         <form action="">
                             <div class="input-group">
                                 <input type="text" class="form-control border-white p-3" placeholder="Your Email">
@@ -754,21 +904,22 @@
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">123 Street, New York, USA</p>
+                                <p class="mb-0"> Gold Souk, Deira, Dubai, UAE
+                                </p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-primary me-2"></i>
-                                <p class="mb-0">info@example.com</p>
+                                <p class="mb-0">info@naifgold.com</p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-telephone text-primary me-2"></i>
-                                <p class="mb-0">+012 345 67890</p>
+                                <p class="mb-0">971 54 404 8993</p>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn- btn-square me-2" style="background-color: rgb(83, 70, 9); color: #ffffff;" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn- btn-square me-2" style="background-color: rgb(83, 70, 9); color: #fffcfc;" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn- btn-square me-2" style="background-color: rgb(83, 70, 9);color: #ffffff;" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn- btn-square"  style="background-color:  rgb(83, 70, 9); color: #fffcfc;"href="#"><i class="fab fa-instagram fw-normal"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
@@ -778,9 +929,9 @@
                             <div class="link-animated d-flex flex-column justify-content-start">
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Produts</a>
+                                <!-- <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a> -->
+                                <!-- <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a> -->
                                 <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                             </div>
                         </div>
@@ -788,13 +939,13 @@
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
                                 <h3 class="text-light mb-0">Popular Links</h3>
                             </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                            <div class="d-flex mt-3">
+                                <a href="#" class="me-2">
+                                    <img src="https://via.placeholder.com/150x50?text=App+Store" alt="Download on App Store" style="width: 150px;">
+                                </a>
+                                <a href="#">
+                                    <img src="https://via.placeholder.com/150x50?text=Google+Play" alt="Get it on Google Play" style="width: 150px;">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -807,11 +958,10 @@
             <div class="row justify-content-end">
                 <div class="col-lg-8 col-md-6">
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved. 
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Naif Gold</a>. All Rights Reserved. 
 						
 						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-						Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
-                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+						Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">Tecnavis</a></p>
                     </div>
                 </div>
             </div>
