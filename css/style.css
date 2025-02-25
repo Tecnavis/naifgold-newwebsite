@@ -473,7 +473,7 @@ h6,
 }
 
 .bg-header {
-    background: linear-gradient(rgba(3, 9, 18, 0.7), rgba(16, 16, 16, 0.7)), url(../img/gold\ bars.jpg) center center no-repeat;
+    background: linear-gradient(rgba(18, 17, 3, 0.7), rgba(16, 16, 16, 0.7)), url(../img/gold\ bars.jpg) center center no-repeat;
     background-size: cover;
 }
 
